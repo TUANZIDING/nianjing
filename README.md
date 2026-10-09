@@ -1,97 +1,103 @@
 # 念景 · Nianjing
 
-**把心里的话，做成会动的画。**
+**English** · [简体中文](文档/中文说明v1.1.md)
 
-一个给普通人使用的纸上影像创作桌。写一句心情、回忆或旅行愿望，让摄影风格与纸面绘画相遇，再配上喜欢的动态与音乐。
+**Turn a thought into a moving picture.**
 
-![念景的本地创作桌](文档/创作桌预览v1.0.jpg)
+A warm, paper-inspired creative desk for everyday expression. Start with a feeling, a memory or a place you long to see. Bring photography and drawing together in a short film, with music that feels like you.
 
-从一句话开始 → 拼接画面 → 动态短片 → 配乐 → 合成与导出 → 再改一点。
+![Nianjing in English](文档/英文创作桌预览v1.0.jpg)
 
-本版 **v0.1.0** 是可运行的本地创作工具。无配置时，备好创作指令，在 Muse 等服务创作后导入；配置自己的官方 API 后，可运行生成流程。项目不设收费、充值或订阅窗口。
+One sentence → Collage image → Motion → Music → Compose & export → Refine.
 
-## 现在可以做什么
+**v0.2.0 · Chinese / English.** Switch between 中文 and EN on the desk. Your original words, selected files and existing film stay in place. Interface text and rule-based prompts change language; your own words and custom preferences are not machine-translated.
 
-- 输入自然语言，生成可复制、可保存的图片 / 视频 / 音乐指令。
-- 选择上下或左右拼接、纸上画法、画幅、5 或 10 秒，以及自己的音乐偏好。
-- 预览四组已有 Muse 图片与有声视频。
-- 导入视频、图片和独立音乐，在本地合成并下载 MP4。
-- 用一句话修改指令；单独换音乐时保留视频画面。
-- 配置火山方舟与 Vidu 的图片、视频适配器；Vidu 文生音频作为待实测选项。
+## What you can do
 
-**能力边界：** 创作导演使用规则模板，尚未接入语言模型。四景是用户已有 Muse 输出，不是本工具生成。API 适配器已做离线合同测试，尚未进行真实账户付费生成、质量或账单验证。没有建立 Muse / Hark 完整短片 API 连接。
+- Start without a reference photo or prompting skills.
+- Create image, motion and music prompts from Chinese or English ideas.
+- Choose the paper style, collage layout, aspect ratio and a 5- or 10-second generation target.
+- Preview four existing Muse films with audio.
+- Import video and music, preserve the video picture, and export a composed MP4 locally.
+- Refine prompts in either language. Replace only the music while keeping the picture.
+- Configure your own Volcengine Ark or Vidu account, or use a familiar website and import the result.
 
-## 在自己的电脑上启动
+Nianjing has **no billing, recharge or subscription window**. External generation uses your own provider account. Listed services are candidates, not claimed partners.
 
-需要 Node.js 22 或更高版本。导入与合成需要 FFmpeg 和 ffprobe；仅看示例、组织提示词不需要 FFmpeg。当前本机使用 Node.js 25.4.0 完成验证，Node.js 22 的 CI 配置已备好，尚未远程运行。
+## Start locally
+
+Use Node.js 22 or newer. FFmpeg and ffprobe are needed for media validation and composition; prompt creation and example browsing work without them. Local validation used Node.js 25.4.0. The Node.js 22 CI workflow is prepared but has not run on GitHub.
 
 ```sh
 cd 念景
-node 创作服务v1.0.mjs
+node 创作服务v1.1.mjs
 ```
 
-打开 [本地创作桌](http://127.0.0.1:8787)。没有 npm 依赖，没有前端 CDN，不需要先配置 API Key。
+Open the [English creative desk](http://127.0.0.1:8787/?lang=en) or the [Chinese creative desk](http://127.0.0.1:8787/?lang=zh). There are no npm dependencies or frontend CDNs.
 
-macOS 可在已安装 Homebrew 的环境使用 `brew install ffmpeg`。其他系统从 [FFmpeg 官方下载页](https://ffmpeg.org/download.html)安装，并确保两个命令都能在终端运行。
+The language choice is saved locally. An explicit `?lang=en` or `?lang=zh` link takes priority; otherwise the desk uses your saved choice or browser language. Code files ending in v1.1 are the current entry points; v1.0 files remain as the first-release snapshot.
 
-端口被占用时：
+Install FFmpeg from its [official download page](https://ffmpeg.org/download.html), and make both `ffmpeg` and `ffprobe` available in your terminal. On a Mac with Homebrew installed, use `brew install ffmpeg`.
+
+If the default port is busy:
 
 ```sh
-NIANJING_PORT=8788 node 创作服务v1.0.mjs
+NIANJING_PORT=8788 node 创作服务v1.1.mjs
 ```
 
-## 两种创作方式
+## Two ways to create
 
-| 方式 | 如何完成 | 当前状态 |
+| Mode | Workflow | Verified status |
 | --- | --- | --- |
-| Muse / Hark / 其他官网 | 写下想法 → 复制指令 → 在第三方创作 → 导入视频与音乐 → 本地合成 | 导入、合成和导出已验证；不会自动向外部聊天发送消息 |
-| 自己的官方 API | 配置图片和视频模型 → 选择 API 模式 → 生成图片 → 动态视频 / 音频 → 合成 | 适配器与离线流程已实现；付费实测待完成 |
+| Muse, Hark or another website | Write an idea → copy prompts → create externally → import files → compose locally | Import, composition and download tested. No automatic messages sent to external chats. |
+| Your own official API | Configure image and video models → generate a collage → generate motion and optional music → compose | Adapters and offline workflows implemented; paid generation has not been tested. |
 
-未配置独立音乐时，沿用视频自身音轨；若视频无声，页面会明确提示。可以随后导入喜欢的音乐。外部服务与 API 的费用由使用者自己的账户承担。
+The director uses **editable rule-based templates**, with six scene categories; it is not a language model. The four sample films are existing user-provided Muse works, not new Nianjing output. No complete-film Muse or Hark API connection has been established. Model access, quality, latency and billing need live verification in your account.
 
-## 配置自己的服务
+Without separate music, the video keeps its own soundtrack. A silent video is clearly labeled; import audio later to add music. Switching interface language does not submit a new generation request.
+
+## Bring your own API
 
 ```sh
 mkdir -p 私有
 cp 服务配置示例v1.0.json 私有/服务配置v1.0.json
 ```
 
-编辑私有文件，设置 `imageProvider` / `videoProvider` 为 `vidu` 或 `volcano`；`audioProvider` 可为 `vidu` 或 `external`。填写各服务的 `apiKey` 和自己账号已开通的模型 ID，再重启。
+Set `imageProvider` and `videoProvider` to `vidu` or `volcano`. Set `audioProvider` to `vidu` or `external`. Add your API key and model IDs already enabled in your account, then restart.
 
-也可以通过 `VIDU_API_KEY`、`VOLCENGINE_API_KEY` 环境变量提供 Key；它们优先于文件。`NIANJING_CONFIG` 可以指定配置文件路径。**Key 只在本机服务端读取，网页只收到配置是否就绪；私有配置和本地作品已被 Git 排除。**
+Keys are read only by the local server; the browser receives readiness flags. Private configuration and local creations are excluded from Git. Environment variables `VIDU_API_KEY` and `VOLCENGINE_API_KEY` override file keys; `NIANJING_CONFIG` sets a custom configuration path.
 
-Vidu 生图模型须支持零参考图文生图；视频模型须支持选定时长和音频参数。方舟首帧视频采用 `ratio=adaptive`，图片尺寸需要与模型能力匹配。本版不会擅自替用户选择或开通模型。详见 [配置与扩展指南](文档/扩展服务指南v1.0.md)和 [官方接口核验](文档/生成接口核验v1.0.md)。
+Vidu's image model must support text-to-image without a reference. Its video model must support the chosen duration and audio parameters. Ark's first-frame video uses `ratio=adaptive`; image size must match the model. Separate Vidu music and account access still await live testing. See the [English setup and contribution guide](文档/English-guidev1.0.md) or [Chinese extension guide](文档/扩展服务指南v1.0.md).
 
-## 四页灵感
+## Four pages of inspiration
 
-以下素材来自用户已有 Muse 创作，仅作为效果示例；音乐权利与创作来源没有独立审查。
+These are existing Muse examples. Their music provenance and commercial rights have not been independently reviewed; see the [asset notice](文档/English-guidev1.0.md#assets-and-license).
 
-| 灯火入梦 | 雪落有归 |
+| Lantern Reverie | A Light in the Snow |
 | --- | --- |
-| ![灯笼古镇](示例/灯笼古镇v1.0.webp) | ![雪山木屋](示例/雪山木屋v1.0.webp) |
-| [查看 10 秒有声视频](示例/灯笼古镇v1.0.mp4) | [查看 10 秒有声视频](示例/雪山木屋v1.0.mp4) |
-| **落日成诗** | **秋光慢行** |
-| ![日落海浪](示例/日落海浪v1.0.webp) | ![秋日森林](示例/秋日森林v1.0.webp) |
-| [查看 10 秒有声视频](示例/日落海浪v1.0.mp4) | [查看 10 秒有声视频](示例/秋日森林v1.0.mp4) |
+| ![Lantern town](示例/灯笼古镇v1.0.webp) | ![Snowy cabin](示例/雪山木屋v1.0.webp) |
+| [Watch the 10-second film](示例/灯笼古镇v1.0.mp4) | [Watch the 10-second film](示例/雪山木屋v1.0.mp4) |
+| **A Tide of Quiet** | **An Autumn Pause** |
+| ![Ocean sunset](示例/日落海浪v1.0.webp) | ![Autumn forest](示例/秋日森林v1.0.webp) |
+| [Watch the 10-second film](示例/日落海浪v1.0.mp4) | [Watch the 10-second film](示例/秋日森林v1.0.mp4) |
 
-另有 [《我的脑子先下课了》提示词案例](提示词/课堂出逃v1.0.md)，用幽默、轻讽刺表达课堂无聊。这个案例尚未生成成片。
+The [bilingual creative guide](提示词/创作指南v1.1.md) includes **My Mind Left Class Early**: a gently satirical classroom idea where lecture notes become paper planes. It is a prompt example, not a generated film.
 
-## 验证与文件
+## Check and contribute
 
 ```sh
-node --test 验证/流程验证v1.0.mjs
+node --test 验证/流程验证v1.1.mjs
+node 验证/交付检查v1.0.mjs
 ```
 
-测试覆盖规则导演、API 请求与状态合同、失败边界、示例哈希、真实 FFmpeg 配乐替换、HTTP 导入合成和下载。测试不会请求付费生成。详见 [交付核验](文档/交付核验v1.0.md)。
+Tests cover both languages, English revisions, language-safe project data, provider contracts, failures, sample integrity, real FFmpeg music replacement, and HTTP import/export. No paid generation is requested. See the [bilingual delivery record](文档/双语核验v1.0.md).
 
-- [项目说明](项目说明v1.0.md)：定位、第一版流程与后续方向。
-- [创作总指令](提示词/创作总指令v1.0.md)：可交给支持多媒体创作的助手。
-- [国内服务调研](文档/国内影像生成服务调研v1.0.md)：官方入口、计费与可调用性边界。
-- [扩展服务指南](文档/扩展服务指南v1.0.md)：欢迎补充适配器与经核实的合作入口。
-- [GitHub 发布准备](文档/GitHub发布准备v1.0.md)：发布文案与仓库设置。
+Contributions can add verified adapters, official service links and confirmed collaboration entries. Keep model facts dated, test contracts offline, and distinguish implemented code from live generation. Do not commit keys, private tasks or unpublished user content. See the [English guide](文档/English-guidev1.0.md).
 
-代码、原创说明和提示词采用 [MIT License](LICENSE)。示例图片、视频及音乐不自动纳入 MIT 授权，请阅读 [素材说明](示例/示例素材说明v1.0.md)。
+Source code, original documentation and prompts use the [MIT License](LICENSE). Example images, videos and music are outside that grant. The server listens only on `127.0.0.1`; public multi-user hosting needs separate authentication, usage controls and task isolation. This release is prepared locally and has not been pushed to GitHub or deployed publicly.
 
-本项目仅监听本机 `127.0.0.1`。请先在自己的电脑使用；公开部署需要另行实现身份认证、用量控制和任务隔离。本版没有发布到 GitHub，也没有部署为公网服务。
+---
 
-新自主命名文件带版本号且不含下划线。`README.md`、`LICENSE`、`.gitignore` 使用平台约定入口名。
+**把心里的话，做成会动的画。** [阅读完整中文说明 →](文档/中文说明v1.1.md)
+
+![念景中文界面](文档/中文创作桌预览v1.0.jpg)

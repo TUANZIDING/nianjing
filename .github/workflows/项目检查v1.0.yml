@@ -13,6 +13,6 @@ jobs:
       - name: 安装本地合成工具
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - name: 离线合同与真实媒体合成测试
-        run: node --test 验证/流程验证v1.0.mjs
+        run: node --test 验证/流程验证v1.1.mjs
       - name: 文档与文件命名检查
         run: node 验证/交付检查v1.0.mjs
