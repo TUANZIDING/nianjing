@@ -1,6 +1,8 @@
 # 念景 · Nianjing
 
-**English** · [简体中文](文档/中文说明v1.1.md)
+**English** · [简体中文](文档/中文说明v1.2.md)
+
+[![Creative workflow checks](https://github.com/TUANZIDING/nianjing/actions/workflows/%E9%A1%B9%E7%9B%AE%E6%A3%80%E6%9F%A5v1.0.yml/badge.svg)](https://github.com/TUANZIDING/nianjing/actions) · [Download v0.2.0](https://github.com/TUANZIDING/nianjing/releases/tag/v0.2.0)
 
 **Turn a thought into a moving picture.**
 
@@ -26,10 +28,11 @@ Nianjing has **no billing, recharge or subscription window**. External generatio
 
 ## Start locally
 
-Use Node.js 22 or newer. FFmpeg and ffprobe are needed for media validation and composition; prompt creation and example browsing work without them. Local validation used Node.js 25.4.0. The Node.js 22 CI workflow is prepared but has not run on GitHub.
+Use Node.js 22 or newer. FFmpeg and ffprobe are needed for media validation and composition; prompt creation and example browsing work without them. Local validation used Node.js 25.4.0. The GitHub Actions workflow uses Node.js 22; its current status is shown above.
 
 ```sh
-cd 念景
+git clone https://github.com/TUANZIDING/nianjing.git
+cd nianjing
 node 创作服务v1.1.mjs
 ```
 
@@ -67,11 +70,11 @@ Set `imageProvider` and `videoProvider` to `vidu` or `volcano`. Set `audioProvid
 
 Keys are read only by the local server; the browser receives readiness flags. Private configuration and local creations are excluded from Git. Environment variables `VIDU_API_KEY` and `VOLCENGINE_API_KEY` override file keys; `NIANJING_CONFIG` sets a custom configuration path.
 
-Vidu's image model must support text-to-image without a reference. Its video model must support the chosen duration and audio parameters. Ark's first-frame video uses `ratio=adaptive`; image size must match the model. Separate Vidu music and account access still await live testing. See the [English setup and contribution guide](文档/English-guidev1.0.md) or [Chinese extension guide](文档/扩展服务指南v1.0.md).
+Vidu's image model must support text-to-image without a reference. Its video model must support the chosen duration and audio parameters. Ark's first-frame video uses `ratio=adaptive`; image size must match the model. Separate Vidu music and account access still await live testing. See the [English setup and contribution guide](文档/English-guidev1.1.md) or [Chinese extension guide](文档/扩展服务指南v1.0.md).
 
 ## Four pages of inspiration
 
-These are existing Muse examples. Their music provenance and commercial rights have not been independently reviewed; see the [asset notice](文档/English-guidev1.0.md#assets-and-license).
+These are existing Muse examples. Their music provenance and commercial rights have not been independently reviewed; see the [asset notice](文档/English-guidev1.1.md#assets-and-license).
 
 | Lantern Reverie | A Light in the Snow |
 | --- | --- |
@@ -92,12 +95,12 @@ node 验证/交付检查v1.0.mjs
 
 Tests cover both languages, English revisions, language-safe project data, provider contracts, failures, sample integrity, real FFmpeg music replacement, and HTTP import/export. No paid generation is requested. See the [bilingual delivery record](文档/双语核验v1.0.md).
 
-Contributions can add verified adapters, official service links and confirmed collaboration entries. Keep model facts dated, test contracts offline, and distinguish implemented code from live generation. Do not commit keys, private tasks or unpublished user content. See the [English guide](文档/English-guidev1.0.md).
+Contributions can add verified adapters, official service links and confirmed collaboration entries. Keep model facts dated, test contracts offline, and distinguish implemented code from live generation. Do not commit keys, private tasks or unpublished user content. See the [English guide](文档/English-guidev1.1.md).
 
-Source code, original documentation and prompts use the [MIT License](LICENSE). Example images, videos and music are outside that grant. The server listens only on `127.0.0.1`; public multi-user hosting needs separate authentication, usage controls and task isolation. This release is prepared locally and has not been pushed to GitHub or deployed publicly.
+Source code, original documentation and prompts use the [MIT License](LICENSE). Example images, videos and music are outside that grant. The server listens only on `127.0.0.1`; public multi-user hosting needs separate authentication, usage controls and task isolation. The GitHub repository distributes the source and downloadable release; the application runs on your own computer. Public application hosting is not included.
 
 ---
 
-**把心里的话，做成会动的画。** [阅读完整中文说明 →](文档/中文说明v1.1.md)
+**把心里的话，做成会动的画。** [阅读完整中文说明 →](文档/中文说明v1.2.md)
 
 ![念景中文界面](文档/中文创作桌预览v1.0.jpg)
