@@ -1,0 +1,24 @@
+{
+  "version": "1.0",
+  "date": "2026-10-09",
+  "generator": "Built-in imagegen",
+  "purpose": "GitHub conceptual key art; not application screenshots or generated-video evidence",
+  "entries": [
+    {
+      "name": "念景封面v1.0.png",
+      "bytes": 3270670,
+      "width": 1942,
+      "height": 809,
+      "sha256": "fc8e7d72fd19c8a6e5c79a41bc2a5fc2334de9a52d68091977e37d732b11b583",
+      "prompt": "Use case: ads-marketing. Asset type: beautiful original panoramic hero artwork for the GitHub homepage of Nianjing (念景), an everyday creative tool joining photography and drawings on paper. Primary request: a refined cinematic editorial collage in which half of a real lantern-lit canal town after rain becomes half of a hand-drawn world on warm cream handmade paper. Wide panoramic composition, roughly 2.4:1. The upper-left and middle is richly detailed photographic water-town architecture, dusk blue air, wet stone steps, golden lanterns and realistic ripples. A gently irregular diagonal torn-paper boundary runs through the image; below and toward the right is tactile ivory paper, delicate pen-drawn canal lines and restrained ochre watercolor. One continuous golden reflection crosses from the actual canal to the paper and becomes a fine drawn stream carrying a little folded paper boat. The contrast between photographic reality and tangible paper drawing is distinct, but the connection is graceful and believable. Warm humanist editorial design, a quiet art-book opening spread, restrained precision, beautiful real materials, tasteful negative space, slight paper fibers, soft natural shadows. Palette cream, charcoal ink, aged gold, muted dusk teal. No UI or fake screens. No letters, no typography, no words, no numbers, no logos, no watermark, no people. This is conceptual key art, not an application screenshot. Deliver one single seamless landscape image, no frames or multiple panels."
+    },
+    {
+      "name": "纸上灵感v1.0.png",
+      "bytes": 2976044,
+      "width": 1942,
+      "height": 809,
+      "sha256": "bb6d0895f8b140ab2e5063e5717f9d0bb2f488f21b5e302f40423d16005d560b",
+      "prompt": "Use case: illustration-story. Asset type: second wide editorial artwork for the Nianjing GitHub creative-tool homepage, showing how an ordinary feeling, a memory and a travel wish can become a poetic photo-and-paper collage. Create a sophisticated top-down photographic scene of three beautiful handmade ivory paper pages arranged lightly overlapping on a cream creative desk, in a wide landscape composition roughly 2.4:1. Each page contains a precise hybrid of photography and pen-and-watercolor drawing: the left page shows a quiet real lecture desk and muted classroom wall above a torn paper edge, then one folded paper plane escaping into a softly drawn ochre-and-blue sky; the center page shows a real sunset coast and gold waves flowing downward across the torn paper edge into pale blue watercolor sea lines; the right page shows a real snowy cabin with a warm window whose light continues as a fine golden ink path over the white paper. The three pages share the same warm handmade paper stock, fine charcoal ink work, pale ochre watercolor and small blue accents. Premium editorial still life, believable paper fibers, soft directional morning light, delicate shadows, restrained spacious composition, graceful quiet humor in the paper plane. The images should read as artwork rather than product screen mockups. No computers, no phones, no buttons, no UI, no letters, no typography, no words, no numbers, no brands, no watermark. Avoid busy props and cartoon-like plastic rendering. One finished panoramic composition."
+    }
+  ]
+}

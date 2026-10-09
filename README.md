@@ -1,34 +1,77 @@
-# 念景 · Nianjing
+<p align="center">
+  <img src="文档/主图/念景封面v1.0.png" width="100%" alt="念景概念主图：雨后灯笼古镇的摄影场景，经撕纸边缘延续为钢笔与金色水彩河流，一只纸船连接两个世界">
+</p>
 
-**English** · [简体中文](文档/中文说明v1.2.md)
+<h1 align="center">念景 · Nianjing</h1>
 
-[![Creative workflow checks](https://github.com/TUANZIDING/nianjing/actions/workflows/%E9%A1%B9%E7%9B%AE%E6%A3%80%E6%9F%A5v1.0.yml/badge.svg)](https://github.com/TUANZIDING/nianjing/actions) · [Download v0.2.0](https://github.com/TUANZIDING/nianjing/releases/tag/v0.2.0)
+<p align="center">
+  <strong>把心里的话，做成会动的画。</strong><br>
+  Turn a thought into a moving picture.
+</p>
 
-**Turn a thought into a moving picture.**
+<p align="center">
+  给心情、回忆和旅行愿望，一张温暖的纸上创作桌。<br>
+  A creative desk for everyday feelings, memories and places you long to see.
+</p>
 
-A warm, paper-inspired creative desk for everyday expression. Start with a feeling, a memory or a place you long to see. Bring photography and drawing together in a short film, with music that feels like you.
+<p align="center">
+  <a href="README.md">简体中文</a> · <a href="文档/英文说明v1.0.md">English</a>
+</p>
 
-![Nianjing in English](文档/英文创作桌预览v1.0.jpg)
+<p align="center">
+  <a href="https://github.com/TUANZIDING/nianjing/releases/latest"><img src="https://img.shields.io/github/v/release/TUANZIDING/nianjing?color=96704f" alt="最新发布版本"></a>
+  <a href="https://github.com/TUANZIDING/nianjing/actions"><img src="https://github.com/TUANZIDING/nianjing/actions/workflows/%E9%A1%B9%E7%9B%AE%E6%A3%80%E6%9F%A5v1.0.yml/badge.svg" alt="创作流程自动检查"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/code-MIT-637568" alt="代码采用MIT许可"></a>
+</p>
 
-One sentence → Collage image → Motion → Music → Compose & export → Refine.
+<p align="center">
+  <code>摄影 × 纸上绘画</code> · <code>自选配乐</code> · <code>中英文</code> · <code>本地创作</code>
+</p>
 
-**v0.2.0 · Chinese / English.** Switch between 中文 and EN on the desk. Your original words, selected files and existing film stay in place. Interface text and rule-based prompts change language; your own words and custom preferences are not machine-translated.
+<p align="center">
+  <a href="#inspiration">创作灵感</a> ｜ <a href="#gallery">四页作品</a> ｜ <a href="#quick-start">快速开始</a> ｜ <a href="#capabilities">能力状态</a> ｜ <a href="#contribute">参与共创</a>
+</p>
 
-## What you can do
+<p align="center"><sub>封面为本轮AI生成的概念主图；真实应用界面与既有Muse作品在下方分别展示。</sub></p>
 
-- Start without a reference photo or prompting skills.
-- Create image, motion and music prompts from Chinese or English ideas.
-- Choose the paper style, collage layout, aspect ratio and a 5- or 10-second generation target.
-- Preview four existing Muse films with audio.
-- Import video and music, preserve the video picture, and export a composed MP4 locally.
-- Refine prompts in either language. Replace only the music while keeping the picture.
-- Configure your own Volcengine Ark or Vidu account, or use a familiar website and import the result.
+---
 
-Nianjing has **no billing, recharge or subscription window**. External generation uses your own provider account. Listed services are candidates, not claimed partners.
+<a id="inspiration"></a>
+## 从一句话开始 · Start with a thought
 
-## Start locally
+不用准备参考图片，也不用先学提示词或剪辑。写下你想表达的事，再逐步选择画面、动态与音乐。
 
-Use Node.js 22 or newer. FFmpeg and ffprobe are needed for media validation and composition; prompt creation and example browsing work without them. Local validation used Node.js 25.4.0. The GitHub Actions workflow uses Node.js 22; its current status is shown above.
+| 今天想表达什么 | 可以从这里开始 |
+| --- | --- |
+| 一点幽默与解压 | “课还没结束，我的脑子先下课了。让讲义变成纸飞机。” |
+| 一段想留住的回忆 | “那次海边的夕阳，想把它留在一页会动的画里。” |
+| 一个还没去过的地方 | “想住进雪山脚下的小木屋，窗里有一盏暖灯。” |
+
+<p align="center">
+  <img src="文档/主图/纸上灵感v1.0.png" width="100%" alt="三页念景概念创作：课堂纸飞机、日落海浪和雪山木屋，摄影与纸上绘画相接">
+</p>
+
+<sub>创作场景概念图，AI生成；不是应用截图或已生成短片。[主图来源与提示词](文档/主图/主图说明v1.0.md)</sub>
+
+<a id="gallery"></a>
+## 四页灵感 · Four pages of inspiration
+
+点击图片看大图，点击片名打开10秒有声短片。以下四景是用户已有的Muse作品。
+
+| 灯火入梦 · Lantern Reverie | 雪落有归 · A Light in the Snow |
+| --- | --- |
+| [![雨后灯笼古镇与纸上河流](示例/灯笼古镇v1.0.webp)](示例/灯笼古镇v1.0.webp) | [![雪山木屋与金色纸上小径](示例/雪山木屋v1.0.webp)](示例/雪山木屋v1.0.webp) |
+| [观看短片 / Watch film →](示例/灯笼古镇v1.0.mp4) | [观看短片 / Watch film →](示例/雪山木屋v1.0.mp4) |
+| **落日成诗 · A Tide of Quiet** | **秋光慢行 · An Autumn Pause** |
+| [![日落海浪延续为纸上水彩](示例/日落海浪v1.0.webp)](示例/日落海浪v1.0.webp) | [![秋日森林与纸上落叶](示例/秋日森林v1.0.webp)](示例/秋日森林v1.0.webp) |
+| [观看短片 / Watch film →](示例/日落海浪v1.0.mp4) | [观看短片 / Watch film →](示例/秋日森林v1.0.mp4) |
+
+<sub>既有Muse示例，不是念景现场生成结果；媒体与音乐的授权范围见[素材说明](示例/示例素材说明v1.0.md)。</sub>
+
+<a id="quick-start"></a>
+## 先用起来 · Quick start
+
+需要 **Node.js 22+**。仅看示例与组织指令无需FFmpeg；检查媒体、换配乐与合成需要 **FFmpeg和ffprobe**。
 
 ```sh
 git clone https://github.com/TUANZIDING/nianjing.git
@@ -36,71 +79,83 @@ cd nianjing
 node 创作服务v1.1.mjs
 ```
 
-Open the [English creative desk](http://127.0.0.1:8787/?lang=en) or the [Chinese creative desk](http://127.0.0.1:8787/?lang=zh). There are no npm dependencies or frontend CDNs.
+然后打开 [中文创作桌](http://127.0.0.1:8787/?lang=zh) 或 [English creative desk](http://127.0.0.1:8787/?lang=en)。
 
-The language choice is saved locally. An explicit `?lang=en` or `?lang=zh` link takes priority; otherwise the desk uses your saved choice or browser language. Code files ending in v1.1 are the current entry points; v1.0 files remain as the first-release snapshot.
+也可从 [Release下载项目包](https://github.com/TUANZIDING/nianjing/releases/latest)，解压后在项目目录运行同一启动命令。[完整安装与中文使用说明](文档/中文说明v1.3.md) · [English guide](文档/English-guidev1.2.md)
 
-Install FFmpeg from its [official download page](https://ffmpeg.org/download.html), and make both `ffmpeg` and `ffprobe` available in your terminal. On a Mac with Homebrew installed, use `brew install ffmpeg`.
+| 中文创作桌 | English creative desk |
+| --- | --- |
+| ![中文应用实际界面](文档/中文创作桌预览v1.0.jpg) | ![Actual English application interface](文档/英文创作桌预览v1.0.jpg) |
 
-If the default port is busy:
+<sub>实际应用截图。右上角中文 / EN切换保留原话、自定偏好、已选文件和作品。</sub>
 
-```sh
-NIANJING_PORT=8788 node 创作服务v1.1.mjs
-```
+<a id="how-it-works"></a>
+## 一个想法，串起画面与音乐 · One idea connects the film
 
-## Two ways to create
+**写下想法 → 拼接画面指令 → 动态与配乐指令 → 创作或导入 → 本地合成 → 再改一点**
 
-| Mode | Workflow | Verified status |
+| 想做的事 | 念景怎样接住它 |
+| --- | --- |
+| 从零开始表达 | 根据中英文想法组织画面、动态、音乐三类规则指令，可复制或保存。 |
+| 保留虚实拼接的味道 | 摄影与绘画各占一部分，纸张边缘和连接物件贯穿画面。 |
+| 改得更像自己 | 调整纸上画法、上下 / 左右布局、画幅、5 / 10秒目标和自己的音乐偏好。 |
+| 使用熟悉的工具 | 在Muse、Hark等官网创作，导入视频和音乐后合成。 |
+| 只换音乐 | 用新音轨替换原音轨，保留视频画面；原对白与环境音也会被替换。 |
+| 使用自己的API | 配置火山方舟或Vidu的已开通模型后运行生成流程。 |
+
+喜欢幽默也可以。[《我的脑子先下课了》双语提示词](提示词/创作指南v1.1.md)保留轻讽刺和解压表达，该案例尚未生成成片。
+
+<a id="capabilities"></a>
+## 当前做到哪一步 · Capability status
+
+| 状态 | 内容 | 实际边界 |
 | --- | --- | --- |
-| Muse, Hark or another website | Write an idea → copy prompts → create externally → import files → compose locally | Import, composition and download tested. No automatic messages sent to external chats. |
-| Your own official API | Configure image and video models → generate a collage → generate motion and optional music → compose | Adapters and offline workflows implemented; paid generation has not been tested. |
+| 已实现 | 中英文界面、规则指令、自然语言修改 | 使用六类场景模板，尚未接入语言模型；用户原话不被自动翻译。 |
+| 已验证 | 示例播放、导入、FFmpeg合成、MP4导出 | 本地流程与GitHub自动检查覆盖媒体合成；换音乐保留视频流。 |
+| 离线验证 | 火山方舟图片 / 视频、Vidu图片 / 视频 / 音频适配器 | 真实账户付费生成、音频效果与账单尚未实测。 |
+| 外部创作 | Muse、Hark和其他官网入口 | 未建立Muse / Hark完整短片API连接。 |
 
-The director uses **editable rule-based templates**, with six scene categories; it is not a language model. The four sample films are existing user-provided Muse works, not new Nianjing output. No complete-film Muse or Hark API connection has been established. Model access, quality, latency and billing need live verification in your account.
+念景不设收费、充值或订阅窗口。外部生成使用你自己的服务账号，列出的服务是候选入口，未宣称合作伙伴关系。应用在自己的电脑运行。
 
-Without separate music, the video keeps its own soundtrack. A silent video is clearly labeled; import audio later to add music. Switching interface language does not submit a new generation request.
-
-## Bring your own API
+<details>
+<summary><strong>想启用自己的官方API？ / Bring your own API</strong></summary>
 
 ```sh
 mkdir -p 私有
 cp 服务配置示例v1.0.json 私有/服务配置v1.0.json
 ```
 
-Set `imageProvider` and `videoProvider` to `vidu` or `volcano`. Set `audioProvider` to `vidu` or `external`. Add your API key and model IDs already enabled in your account, then restart.
+在私有文件中配置图片、视频模型及自己的Key，再重启。API模式需要图片与视频配置均就绪；音乐可选。Key只由本机服务端读取，私有配置和本地作品被Git排除。
 
-Keys are read only by the local server; the browser receives readiness flags. Private configuration and local creations are excluded from Git. Environment variables `VIDU_API_KEY` and `VOLCENGINE_API_KEY` override file keys; `NIANJING_CONFIG` sets a custom configuration path.
+模型权限、支持参数和费用由服务商账号决定。[中文配置指南](文档/扩展服务指南v1.0.md) · [English setup guide](文档/English-guidev1.2.md)
 
-Vidu's image model must support text-to-image without a reference. Its video model must support the chosen duration and audio parameters. Ark's first-frame video uses `ratio=adaptive`; image size must match the model. Separate Vidu music and account access still await live testing. See the [English setup and contribution guide](文档/English-guidev1.1.md) or [Chinese extension guide](文档/扩展服务指南v1.0.md).
+</details>
 
-## Four pages of inspiration
+<a id="contribute"></a>
+## 一起把它做得更好 · Contribute
 
-These are existing Muse examples. Their music provenance and commercial rights have not been independently reviewed; see the [asset notice](文档/English-guidev1.1.md#assets-and-license).
+欢迎添加经过验证的服务适配器、更多创作模板、音乐风格和有依据的合作入口。界面文案应同时提供中英文，语言切换应保留作品与输入。
 
-| Lantern Reverie | A Light in the Snow |
+| 你想了解什么 | 从这里进入 |
 | --- | --- |
-| ![Lantern town](示例/灯笼古镇v1.0.webp) | ![Snowy cabin](示例/雪山木屋v1.0.webp) |
-| [Watch the 10-second film](示例/灯笼古镇v1.0.mp4) | [Watch the 10-second film](示例/雪山木屋v1.0.mp4) |
-| **A Tide of Quiet** | **An Autumn Pause** |
-| ![Ocean sunset](示例/日落海浪v1.0.webp) | ![Autumn forest](示例/秋日森林v1.0.webp) |
-| [Watch the 10-second film](示例/日落海浪v1.0.mp4) | [Watch the 10-second film](示例/秋日森林v1.0.mp4) |
-
-The [bilingual creative guide](提示词/创作指南v1.1.md) includes **My Mind Left Class Early**: a gently satirical classroom idea where lecture notes become paper planes. It is a prompt example, not a generated film.
-
-## Check and contribute
+| 中文完整使用与安装 | [中文说明](文档/中文说明v1.3.md) |
+| English overview & setup | [English homepage](文档/英文说明v1.0.md) · [Setup & contribution](文档/English-guidev1.2.md) |
+| 创作提示词 | [双语创作指南](提示词/创作指南v1.1.md) |
+| 扩展服务与官方接口 | [扩展指南](文档/扩展服务指南v1.0.md) · [接口核验](文档/生成接口核验v1.0.md) |
+| 已完成的检查 | [双语流程记录](文档/双语核验v1.0.md) · [GitHub Actions](https://github.com/TUANZIDING/nianjing/actions) |
+| 建议或问题 | [GitHub Issues](https://github.com/TUANZIDING/nianjing/issues) |
 
 ```sh
 node --test 验证/流程验证v1.1.mjs
 node 验证/交付检查v1.0.mjs
 ```
 
-Tests cover both languages, English revisions, language-safe project data, provider contracts, failures, sample integrity, real FFmpeg music replacement, and HTTP import/export. No paid generation is requested. See the [bilingual delivery record](文档/双语核验v1.0.md).
-
-Contributions can add verified adapters, official service links and confirmed collaboration entries. Keep model facts dated, test contracts offline, and distinguish implemented code from live generation. Do not commit keys, private tasks or unpublished user content. See the [English guide](文档/English-guidev1.1.md).
-
-Source code, original documentation and prompts use the [MIT License](LICENSE). Example images, videos and music are outside that grant. The server listens only on `127.0.0.1`; public multi-user hosting needs separate authentication, usage controls and task isolation. The GitHub repository distributes the source and downloadable release; the application runs on your own computer. Public application hosting is not included.
-
 ---
 
-**把心里的话，做成会动的画。** [阅读完整中文说明 →](文档/中文说明v1.2.md)
+<p align="center">
+  <strong>念景 · Nianjing</strong><br>
+  让表达有自己的形状。<br>
+  <a href="https://github.com/TUANZIDING">TUANZIDING</a> · <a href="LICENSE">MIT</a> · <a href="文档/主图/主图说明v1.0.md">主图来源</a> · <a href="示例/示例素材说明v1.0.md">示例媒体授权</a>
+</p>
 
-![念景中文界面](文档/中文创作桌预览v1.0.jpg)
+<sub>代码、原创文档与提示词采用MIT许可；概念主图与既有Muse媒体的说明分别保留。GitHub分发源码和项目包，公网多人服务需要另外实现身份认证、用量控制和任务隔离。</sub>
