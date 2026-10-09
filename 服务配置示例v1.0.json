@@ -1,0 +1,22 @@
+{
+  "imageProvider": "external",
+  "videoProvider": "external",
+  "audioProvider": "external",
+  "volcano": {
+    "apiKey": "",
+    "imageModel": "",
+    "imageSize": "2K",
+    "videoModel": "",
+    "videoResolution": "720p",
+    "nativeAudio": false
+  },
+  "vidu": {
+    "apiKey": "",
+    "imageModel": "",
+    "imageResolution": "1080p",
+    "videoModel": "",
+    "videoResolution": "1080p",
+    "audioModel": "",
+    "nativeAudio": false
+  }
+}

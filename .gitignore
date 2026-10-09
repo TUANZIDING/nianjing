@@ -1,0 +1,8 @@
+.DS_Store
+.env
+.env.*
+私有/
+本地作品/
+node_modules/
+*.log
+*.zip

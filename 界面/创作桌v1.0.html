@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="念景：把心里的话，做成会动的画。一个温暖的纸上影像创作桌。">
+  <title>念景 · 把心里的话，做成会动的画</title>
+  <link rel="stylesheet" href="/纸上风格v1.0.css"><script type="module" src="/交互逻辑v1.0.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="#top" aria-label="念景首页"><span class="brand-mark">念</span><span>念景<small>NIANJING</small></span></a>
+    <nav aria-label="主导航"><a href="#works">四页灵感</a><a href="#studio">我的创作桌</a><a href="#services">创作方式</a></nav>
+    <span class="edition">本地创作版 <span>0.1</span></span>
+  </header>
+  <main id="top">
+    <section class="opening" aria-labelledby="headline">
+      <div class="intro"><p class="eyebrow">给每个说不清的瞬间，一幅会动的画</p><h1 id="headline">把心里的话，<br>做成<span>会动的画。</span></h1>
+      <p class="lead">心情、回忆，或一个还没去过的地方。<br>从一句话开始，让现实与想象在纸上相遇。</p>
+      <form id="idea-form" class="idea-form">
+        <label for="idea">今天，心里有什么画面？</label>
+        <textarea id="idea" name="idea" rows="3" maxlength="2000" required placeholder="今天有些累，想去海边坐一会儿，让海浪慢慢流进画纸。"></textarea>
+        <div class="form-footer"><span>不需要参考图，也不需要会写提示词</span><button type="submit" class="primary" id="create-button">开始创作 <span aria-hidden="true">↗</span></button></div>
+        <details class="preferences"><summary>加一点自己的偏好</summary><div class="preference-grid">
+          <label>情绪<input id="mood" maxlength="200" placeholder="温暖，或幽默一点"></label>
+          <label>音乐<input id="music" maxlength="500" placeholder="温柔钢琴，轻一点，无人声"></label>
+          <label>画面<select id="ratio"><option>16:9</option><option>9:16</option><option>1:1</option></select></label>
+          <label>时长<select id="duration"><option value="10">10 秒</option><option value="5">5 秒</option></select></label>
+          <label>拼接<select id="layout"><option value="上下">上下相遇</option><option value="左右">左右相遇</option></select></label>
+          <label>纸上画法<select id="drawing"><option>钢笔速写与淡水彩</option><option>铅笔素描</option><option>浓淡水墨</option><option>柔和粉彩</option></select></label>
+        </div></details>
+        <div class="mode-row"><label for="mode">创作方式</label><select id="mode"><option value="external">使用 Muse 等服务 · 导入作品</option><option value="api" disabled>官方 API · 待配置</option></select></div>
+      </form>
+      <p class="quiet-note">先写出你的想法。纸页、动态与音乐，由同一个故事串起。</p></div>
+      <figure class="hero-art"><div class="paper-frame"><img src="/示例/灯笼古镇v1.0.webp" alt="上半是灯笼古镇的摄影场景，下半是米白纸上绘画，金色水流连接两个世界" width="2096" height="1184"><span class="art-number">01 / 灯火入梦</span></div><figcaption><span>一半是现实，一半是心里的世界。</span><small>Muse 既有创作示例</small></figcaption><div class="margin-note" aria-hidden="true">让一条河，流进一页纸。</div></figure>
+    </section>
+    <section class="gallery-section" id="works" aria-labelledby="gallery-title">
+      <div class="section-top"><div><p class="eyebrow">从一页灵感开始</p><h2 id="gallery-title">四个场景，四种心情。</h2></div><p>点开听一听，也可以借它写下自己的想法。<br><small>下面均为已有 Muse 作品，并非本工具现场生成。</small></p></div>
+      <div id="gallery" class="gallery" aria-live="polite"></div>
+      <button type="button" class="text-button" id="classroom-idea">试试幽默一点：我的脑子先下课了 <span aria-hidden="true">→</span></button>
+    </section>
+    <section class="studio" id="studio" aria-labelledby="studio-title">
+      <div class="section-top"><div><p class="eyebrow">你的纸上创作桌</p><h2 id="studio-title">把这一念，慢慢做成作品。</h2></div><span class="status-pill" id="stage">等待一个想法</span></div>
+      <p id="notice" class="notice" role="status" aria-live="polite">先在上方写一句话。没有 API 时，也可以复制指令，在熟悉的服务里创作后带回来。</p>
+      <div class="studio-grid">
+        <div class="viewer"><div class="viewer-placeholder" id="placeholder"><span class="placeholder-symbol" aria-hidden="true">✧</span><h3>你心里的画，还没翻到这一页。</h3><p>先看四页灵感，或写下一个新想法。</p></div><video id="preview" controls playsinline preload="metadata" hidden aria-label="作品预览"></video><img id="image-preview" hidden alt="当前作品的拼接画面"><div class="preview-caption"><span id="preview-label">当前没有新作品</span><a id="export-link" class="download" hidden download>下载成片 ↓</a></div></div>
+        <div class="workbench">
+          <div class="plan-heading"><h3 id="plan-title">创作指令</h3><button id="save-plan" type="button" class="text-button" disabled>保存构想 ↓</button></div>
+          <div class="tabs" role="tablist" aria-label="创作指令类型"><button role="tab" id="tab-image" aria-controls="prompt-panel" aria-selected="true" tabindex="0" data-kind="image">拼接画面</button><button role="tab" id="tab-video" aria-controls="prompt-panel" aria-selected="false" tabindex="-1" data-kind="video">动态短片</button><button role="tab" id="tab-audio" aria-controls="prompt-panel" aria-selected="false" tabindex="-1" data-kind="audio">喜欢的音乐</button></div>
+          <div id="prompt-panel" role="tabpanel" aria-labelledby="tab-image"><textarea id="prompt" readonly rows="8" aria-label="可复制的创作指令" placeholder="你的想法会在这里展开成创作指令。"></textarea></div>
+          <div class="prompt-footer"><span>本版使用可编辑规则模板</span><button type="button" id="copy-prompt" class="secondary" disabled>复制指令</button></div>
+          <form id="revision-form" class="revision"><label for="revision">再改一点，直到像你喜欢的样子。</label><div class="revision-row"><input id="revision" maxlength="1000" required placeholder="音乐换成俏皮钢琴，轻一点"><button type="submit" class="secondary" id="revise-button" disabled>更新指令</button></div><button type="button" id="regenerate-audio" class="text-button" hidden>保留画面，生成新配乐 ↗</button><p>修改画面后可用当前构想重新创作；只换音乐可导入音频再合成。</p></form>
+        </div>
+      </div>
+      <details class="import-area" id="import-area"><summary>带回你的作品 · 导入与合成</summary><p>在 Muse、Hark 或其他服务完成创作后，把文件带回来。视频为必需，图片与独立音乐按需导入。单个视频或音频最多 100 MB，图片最多 15 MB。</p><div class="import-grid"><label>动态视频<input type="file" id="video-file" accept="video/*"><small id="video-info">尚未导入</small></label><label>独立音乐<input type="file" id="audio-file" accept="audio/*"><small id="audio-info">沿用视频原有音轨，或用新音乐替换</small></label><label>拼接图片<input type="file" id="image-file" accept="image/png,image/jpeg,image/webp"><small id="image-info">可选，保留创作画面</small></label></div><button type="button" id="compose-button" class="primary" disabled>合成并导出成片 ↗</button><span class="import-hint">画面保留，音轨自然收尾；本地合成需要 FFmpeg。</span></details>
+    </section>
+    <section class="services-section" id="services"><div class="section-top"><div><p class="eyebrow">用你喜欢的创作方式</p><h2>一张桌子，接住不同的灵感。</h2></div><p>使用自己熟悉的账号，或配置自己的官方 API。<br>念景不设收费和充值窗口。</p></div><p class="service-status" id="service-status">正在读取本地配置…</p><div id="service-list" class="service-list"></div><details class="config-help"><summary>如何启用官方 API？</summary><p>把项目中的「服务配置示例v1.0.json」复制到「私有/服务配置v1.0.json」，填入自己的 Key 和已开通的模型 ID，选择每一层的服务后重启。图片和视频都就绪后，页面会启用 API 创作。独立音乐可稍后配置。</p><p>API 会按第三方规则产生费用；网页不会接收或显示你的 Key。适配器尚未付费实测，首次使用请先确认模型权限和账户用量。服务入口是候选清单，没有宣称合作关系。</p></details></section>
+  </main>
+  <footer><span class="footer-brand">念景 <small>NIANJING</small></span><p>让表达有自己的形状。<br><small>本地保存 · 自带服务 · 开放扩展</small></p><a href="#top">回到这一页 ↑</a></footer>
+</body></html>

@@ -1,0 +1,87 @@
+{
+  "version": "0.1.0",
+  "source": "用户既有 Muse 输出",
+  "verification": "本次字节复制哈希一致；音视频元数据另行检查。音乐风格及权利未独立审查。",
+  "entries": [
+    {
+      "id": "1",
+      "scene": "灯笼古镇",
+      "title": "灯火入梦",
+      "idea": "想去雨后的江南古镇，看灯光流进纸上的河。",
+      "source": "Muse 既有示例，非本工具现场生成",
+      "duration": 10,
+      "files": {
+        "image": {
+          "name": "灯笼古镇v1.0.webp",
+          "sha256": "d68acd9fe0c349f635a2ab0d450308d22ef9b7f2d5071eba79130353c56a79e4",
+          "bytes": 572388
+        },
+        "video": {
+          "name": "灯笼古镇v1.0.mp4",
+          "sha256": "14739dd5052c7e2c21d1f458951c6fa52b410103fc37619122c97fab9a2709fb",
+          "bytes": 9398776
+        }
+      }
+    },
+    {
+      "id": "2",
+      "scene": "雪山木屋",
+      "title": "雪落有归",
+      "idea": "想住进雪山脚下的小木屋，窗里有一盏暖灯。",
+      "source": "Muse 既有示例，非本工具现场生成",
+      "duration": 10,
+      "files": {
+        "image": {
+          "name": "雪山木屋v1.0.webp",
+          "sha256": "b1e7efccadef87e54830582e53d9c8ac91585c7c89f8465eae990480bb263a4c",
+          "bytes": 566690
+        },
+        "video": {
+          "name": "雪山木屋v1.0.mp4",
+          "sha256": "8fabdf96914cf40a8ae6a3eb37a36f5327a5b69aa28ce86b370890611424e1b1",
+          "bytes": 6177682
+        }
+      }
+    },
+    {
+      "id": "3",
+      "scene": "日落海浪",
+      "title": "落日成诗",
+      "idea": "今天有些累，想去海边坐一会儿，看夕阳把海浪写成画。",
+      "source": "Muse 既有示例，非本工具现场生成",
+      "duration": 10,
+      "files": {
+        "image": {
+          "name": "日落海浪v1.0.webp",
+          "sha256": "5d5f3e9adfa669b99b30703d3dd13efb093b578a72e148d29ada0ad62bdcc2a0",
+          "bytes": 620062
+        },
+        "video": {
+          "name": "日落海浪v1.0.mp4",
+          "sha256": "866e302d0d23b63c7215e9aede4ba83c3dd731f6de1ab3577d104cdefd7bffe8",
+          "bytes": 8467146
+        }
+      }
+    },
+    {
+      "id": "4",
+      "scene": "秋日森林",
+      "title": "秋光慢行",
+      "idea": "想在秋天的森林里慢慢走，让金色落叶把日子翻成一页画。",
+      "source": "Muse 既有示例，非本工具现场生成",
+      "duration": 10,
+      "files": {
+        "image": {
+          "name": "秋日森林v1.0.webp",
+          "sha256": "656267031b2d2ac50009b5157d4f1055f01552396e3a7edd32ef5117a916917c",
+          "bytes": 803150
+        },
+        "video": {
+          "name": "秋日森林v1.0.mp4",
+          "sha256": "dcedf654a61fd8b7bcbd9d375eb435b599aa6feae64f072fd92af05cd4dd0520",
+          "bytes": 9641009
+        }
+      }
+    }
+  ]
+}
